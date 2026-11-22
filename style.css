@@ -1,0 +1,592 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kalam:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --cream: #fff7ed;
+    --pink: #f8dce5;
+    --dark-pink: #d987a5;
+    --rose: #b96d88;
+    --brown: #70535a;
+    --paper: #fffdf8;
+    --shadow: rgba(111, 76, 82, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(#e9c9c9 0.7px, transparent 0.7px);
+    background-size: 19px 19px;
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* PAGES */
+
+.page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(25px) scale(0.98);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0.7s;
+    z-index: 1;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.content {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    padding: 25px;
+}
+
+/* DECORATION */
+
+.content::before {
+    content: "♡";
+    position: absolute;
+    top: -30px;
+    left: 5%;
+    color: #e7a5b9;
+    font-size: 35px;
+    transform: rotate(-15deg);
+}
+
+.content::after {
+    content: "✿";
+    position: absolute;
+    right: 5%;
+    bottom: -25px;
+    color: #d99caf;
+    font-size: 32px;
+}
+
+/* TEXT */
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    color: var(--rose);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.15;
+    color: #9d6178;
+    margin-bottom: 22px;
+    font-weight: normal;
+}
+
+h1 span {
+    color: #e49ab2;
+}
+
+.text {
+    color: #8c6d74;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* BUTTONS */
+
+.next-btn {
+    margin-top: 25px;
+    border: 2px solid #e8afc2;
+    background: #f6d9e3;
+    color: #825568;
+    padding: 13px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 4px 0 #e6b9c8;
+}
+
+.next-btn:hover {
+    transform: translateY(-4px) rotate(-2deg);
+    box-shadow: 5px 7px 0 #e6b9c8;
+}
+
+/* BIRTHDAY */
+
+.birthday-title span {
+    color: #d987a5;
+}
+
+.floating-emoji {
+    font-size: 55px;
+    margin: 25px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* LETTER */
+
+.letter {
+    background-color: var(--paper);
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #f3dfe2 32px
+    );
+    color: #72545b;
+    padding: 35px;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 4px 7px 0 #e9c4ce, 0 12px 30px var(--shadow);
+    border: 1px solid #f1dce0;
+    transform: rotate(-1deg);
+    animation: letterAppear 1s ease;
+    position: relative;
+}
+
+.letter::before {
+    content: "♥";
+    position: absolute;
+    top: -17px;
+    right: 25px;
+    background: #e9aabd;
+    color: white;
+    padding: 8px 13px;
+    transform: rotate(10deg);
+}
+
+.letter-icon {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.letter h2 {
+    margin-bottom: 20px;
+    font-family: 'Kalam', cursive;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.letter p {
+    font-family: 'Kalam', cursive;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    color: #b35c8b;
+    font-style: italic;
+}
+
+/* CAKE */
+
+.cake {
+    display: inline-block;
+    font-size: 120px;
+    margin: 30px 0;
+    cursor: pointer;
+    animation: cakeBounce 2s ease-in-out infinite;
+    user-select: none;
+    filter: drop-shadow(3px 7px 5px #d9a9b5);
+}
+
+.cake.blown {
+    animation: none;
+    transform: scale(1.15);
+}
+
+/* MEMORIES */
+
+.memory-box {
+    margin: 30px auto;
+    background: #fffdf8;
+    padding: 25px;
+    border: 1px solid #efd1d9;
+    max-width: 400px;
+    transform: rotate(1deg);
+    box-shadow: 5px 7px 0 #edc8d2, 0 12px 25px var(--shadow);
+    animation: fadeUp 1s ease;
+    position: relative;
+}
+
+.memory-box::before {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 24px;
+    background: #f0c8b9;
+    opacity: 0.8;
+    top: -12px;
+    left: 38%;
+    transform: rotate(-4deg);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 240px;
+    background: #f9e7e9;
+    border: 9px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.memory-box p {
+    color: #805d69;
+    margin: 10px;
+    font-family: 'Kalam', cursive;
+    font-size: 18px;
+}
+
+.memory-box .small {
+    font-size: 12px;
+    color: #b08c98;
+}
+
+/* LOVE BUTTONS */
+
+.love-area {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.yes-btn,
+.no-btn {
+    position: absolute;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 3px 4px 0 #e5bac8;
+}
+
+.yes-btn {
+    background: #e9a7bc;
+    color: white;
+    left: 20%;
+    top: 30px;
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+}
+
+.no-btn {
+    background: #f3e5e8;
+    color: #805d69;
+    left: 58%;
+    top: 30px;
+    z-index: 20;
+}
+
+#finalMessage {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #bd7591;
+    line-height: 1.7;
+    font-family: 'Kalam', cursive;
+}
+
+/* PAGE NUMBER */
+
+.page-counter {
+    position: fixed;
+    bottom: 22px;
+    right: 25px;
+    font-size: 12px;
+    color: #b98798;
+    letter-spacing: 2px;
+    z-index: 50;
+}
+
+/* PARTICLES */
+
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.page {
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #e5a5b8;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+.heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99;
+    animation: heartFloat 4s linear forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85) rotate(-4deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(-1deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 0.9;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes heartFloat {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .content {
+        padding: 12px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    .letter p {
+        font-size: 15px;
+    }
+
+    .cake {
+        font-size: 95px;
+    }
+
+    .love-area {
+        max-width: 350px;
+    }
+
+    .yes-btn {
+        left: 10%;
+    }
+
+    .no-btn {
+        left: 60%;
+    }
+
+    .page-counter {
+        bottom: 12px;
+        right: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+#finalMessage {
+    min-height: 65px;
+    animation: fadeUp 0.35s ease;
+}
+
+/* SURPRISE HEART */
+.surprise-heart {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 38px;
+    background: #ffe0eb;
+    border: 2px solid #ff9fbd;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 15px rgba(255, 120, 160, 0.3);
+    animation: heartBlink 1s infinite alternate;
+}
+
+@keyframes heartBlink {
+    from {
+        transform: scale(1);
+        opacity: 0.65;
+    }
+    to {
+        transform: scale(1.18);
+        opacity: 1;
+        box-shadow: 0 0 25px #ff8fb3;
+    }
+}
+
+/* SURPRISE POPUP */
+.surprise-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(60, 35, 45, 0.55);
+    backdrop-filter: blur(6px);
+    z-index: 10001;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.surprise-card {
+    background: #fff8f1;
+    border: 3px dashed #f4a6bd;
+    border-radius: 22px;
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    animation: surprisePop 0.5s ease;
+}
+
+@keyframes surprisePop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.surprise-emoji {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.surprise-card h2 {
+    color: #d85c87;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 15px;
+}
+
+.surprise-card p {
+    color: #74505c;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.surprise-card button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #ed91b0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.surprise-card button:hover {
+    background: #d85c87;
+    transform: scale(1.05);
+}
+
+.love-letter-card {
+    background: #fff0f4;
+    border: 3px solid #f2a9c0;
+}
+
+.gift {
+    font-size: 25px;
+    margin-top: 15px;
+}
