@@ -1,16 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kalam:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
-
-:root {
-    --cream: #fff7ed;
-    --pink: #f8dce5;
-    --dark-pink: #d987a5;
-    --rose: #b96d88;
-    --brown: #70535a;
-    --paper: #fffdf8;
-    --shadow: rgba(111, 76, 82, 0.15);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -18,16 +6,11 @@
 }
 
 body {
-    background-color: var(--cream);
-    background-image:
-        radial-gradient(#e9c9c9 0.7px, transparent 0.7px);
-    background-size: 19px 19px;
-    color: var(--brown);
-    font-family: 'Poppins', sans-serif;
+    background: #100e1b;
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
     overflow: hidden;
 }
-
-/* PAGES */
 
 .page {
     position: fixed;
@@ -39,15 +22,15 @@ body {
     align-items: center;
     padding: 25px;
     text-align: center;
-    overflow-y: auto;
+
     opacity: 0;
     visibility: hidden;
     transform: translateY(25px) scale(0.98);
+
     transition:
         opacity 0.7s ease,
         transform 0.7s ease,
         visibility 0.7s;
-    z-index: 1;
 }
 
 .page.active {
@@ -59,87 +42,52 @@ body {
 .content {
     width: 100%;
     max-width: 700px;
-    position: relative;
-    padding: 25px;
 }
-
-/* DECORATION */
-
-.content::before {
-    content: "♡";
-    position: absolute;
-    top: -30px;
-    left: 5%;
-    color: #e7a5b9;
-    font-size: 35px;
-    transform: rotate(-15deg);
-}
-
-.content::after {
-    content: "✿";
-    position: absolute;
-    right: 5%;
-    bottom: -25px;
-    color: #d99caf;
-    font-size: 32px;
-}
-
-/* TEXT */
 
 .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-size: 11px;
-    color: var(--rose);
+    color: #d4a7c5;
     margin-bottom: 25px;
-    font-weight: 600;
 }
 
 h1 {
-    font-family: 'DM Serif Display', serif;
     font-size: clamp(2.5rem, 8vw, 5rem);
     line-height: 1.15;
-    color: #9d6178;
+    color: #ffe1f0;
     margin-bottom: 22px;
-    font-weight: normal;
 }
 
 h1 span {
-    color: #e49ab2;
+    color: #ff8cba;
 }
 
 .text {
-    color: #8c6d74;
+    color: #cfc3d7;
     line-height: 1.9;
     margin-bottom: 30px;
-    font-size: 15px;
 }
-
-/* BUTTONS */
 
 .next-btn {
     margin-top: 25px;
-    border: 2px solid #e8afc2;
-    background: #f6d9e3;
-    color: #825568;
-    padding: 13px 28px;
-    border-radius: 8px;
+    border: 1px solid #d28bb8;
+    background: #d28bb8;
+    color: #241625;
+    padding: 13px 27px;
+    border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 3px 4px 0 #e6b9c8;
+    font-size: 15px;
 }
 
 .next-btn:hover {
-    transform: translateY(-4px) rotate(-2deg);
-    box-shadow: 5px 7px 0 #e6b9c8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px #d28bb855;
 }
 
-/* BIRTHDAY */
-
 .birthday-title span {
-    color: #d987a5;
+    color: #f5a4cf;
 }
 
 .floating-emoji {
@@ -151,32 +99,13 @@ h1 span {
 /* LETTER */
 
 .letter {
-    background-color: var(--paper);
-    background-image: repeating-linear-gradient(
-        transparent,
-        transparent 31px,
-        #f3dfe2 32px
-    );
-    color: #72545b;
+    background: #f6e9e4;
+    color: #533c4a;
     padding: 35px;
-    border-radius: 4px;
+    border-radius: 12px;
     text-align: left;
-    box-shadow: 4px 7px 0 #e9c4ce, 0 12px 30px var(--shadow);
-    border: 1px solid #f1dce0;
-    transform: rotate(-1deg);
+    box-shadow: 0 15px 50px #0003;
     animation: letterAppear 1s ease;
-    position: relative;
-}
-
-.letter::before {
-    content: "♥";
-    position: absolute;
-    top: -17px;
-    right: 25px;
-    background: #e9aabd;
-    color: white;
-    padding: 8px 13px;
-    transform: rotate(10deg);
 }
 
 .letter-icon {
@@ -187,14 +116,12 @@ h1 span {
 
 .letter h2 {
     margin-bottom: 20px;
-    font-family: 'Kalam', cursive;
-    font-size: 28px;
+    font-family: Georgia, serif;
     font-weight: normal;
 }
 
 .letter p {
-    font-family: 'Kalam', cursive;
-    font-size: 17px;
+    font-family: Georgia, serif;
     line-height: 1.9;
     margin-bottom: 15px;
 }
@@ -214,7 +141,6 @@ h1 span {
     cursor: pointer;
     animation: cakeBounce 2s ease-in-out infinite;
     user-select: none;
-    filter: drop-shadow(3px 7px 5px #d9a9b5);
 }
 
 .cake.blown {
@@ -226,51 +152,34 @@ h1 span {
 
 .memory-box {
     margin: 30px auto;
-    background: #fffdf8;
+    background: #251c31;
     padding: 25px;
-    border: 1px solid #efd1d9;
+    border: 1px solid #5d4567;
+    border-radius: 20px;
     max-width: 400px;
-    transform: rotate(1deg);
-    box-shadow: 5px 7px 0 #edc8d2, 0 12px 25px var(--shadow);
     animation: fadeUp 1s ease;
-    position: relative;
-}
-
-.memory-box::before {
-    content: "";
-    position: absolute;
-    width: 85px;
-    height: 24px;
-    background: #f0c8b9;
-    opacity: 0.8;
-    top: -12px;
-    left: 38%;
-    transform: rotate(-4deg);
 }
 
 .photo-placeholder {
     width: 100%;
     height: 240px;
-    background: #f9e7e9;
-    border: 9px solid white;
+    background: linear-gradient(135deg, #51405b, #2d233c);
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 8px #0001;
 }
 
 .memory-box p {
-    color: #805d69;
+    color: #f2d9ed;
     margin: 10px;
-    font-family: 'Kalam', cursive;
-    font-size: 18px;
 }
 
 .memory-box .small {
     font-size: 12px;
-    color: #b08c98;
+    color: #ad9bb5;
 }
 
 /* LOVE BUTTONS */
@@ -288,17 +197,16 @@ h1 span {
     position: absolute;
     border: none;
     padding: 14px 28px;
-    border-radius: 8px;
+    border-radius: 40px;
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
     transition: transform 0.2s ease;
-    box-shadow: 3px 4px 0 #e5bac8;
 }
 
 .yes-btn {
-    background: #e9a7bc;
-    color: white;
+    background: #ff8fbe;
+    color: #30182b;
     left: 20%;
     top: 30px;
 }
@@ -308,8 +216,8 @@ h1 span {
 }
 
 .no-btn {
-    background: #f3e5e8;
-    color: #805d69;
+    background: #e8deef;
+    color: #30253c;
     left: 58%;
     top: 30px;
     z-index: 20;
@@ -318,9 +226,8 @@ h1 span {
 #finalMessage {
     margin-top: 25px;
     font-size: 22px;
-    color: #bd7591;
+    color: #ffb6d7;
     line-height: 1.7;
-    font-family: 'Kalam', cursive;
 }
 
 /* PAGE NUMBER */
@@ -330,7 +237,7 @@ h1 span {
     bottom: 22px;
     right: 25px;
     font-size: 12px;
-    color: #b98798;
+    color: #a89ab5;
     letter-spacing: 2px;
     z-index: 50;
 }
@@ -350,9 +257,9 @@ h1 span {
 
 .star {
     position: absolute;
-    width: 5px;
-    height: 5px;
-    background: #e5a5b8;
+    width: 3px;
+    height: 3px;
+    background: #fff;
     border-radius: 50%;
     animation: twinkle 2s infinite alternate;
 }
@@ -380,11 +287,11 @@ h1 span {
 @keyframes letterAppear {
     from {
         opacity: 0;
-        transform: scale(0.85) rotate(-4deg);
+        transform: scale(0.85) rotate(-2deg);
     }
     to {
         opacity: 1;
-        transform: scale(1) rotate(-1deg);
+        transform: scale(1) rotate(0);
     }
 }
 
@@ -408,7 +315,7 @@ h1 span {
 
 @keyframes twinkle {
     from {
-        opacity: 0.2;
+        opacity: 0.15;
         transform: scale(0.7);
     }
     to {
@@ -431,20 +338,8 @@ h1 span {
 /* MOBILE */
 
 @media (max-width: 600px) {
-    .content {
-        padding: 12px;
-    }
-
-    .page {
-        padding: 15px;
-    }
-
     .letter {
         padding: 25px;
-    }
-
-    .letter p {
-        font-size: 15px;
     }
 
     .cake {
@@ -462,131 +357,11 @@ h1 span {
     .no-btn {
         left: 60%;
     }
-
-    .page-counter {
-        bottom: 12px;
-        right: 15px;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
-}
-#finalMessage {
-    min-height: 65px;
-    animation: fadeUp 0.35s ease;
-}
-
-/* SURPRISE HEART */
-.surprise-heart {
-    display: none;
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    font-size: 38px;
-    background: #ffe0eb;
-    border: 2px solid #ff9fbd;
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    cursor: pointer;
-    z-index: 10000;
-    box-shadow: 0 4px 15px rgba(255, 120, 160, 0.3);
-    animation: heartBlink 1s infinite alternate;
-}
-
-@keyframes heartBlink {
-    from {
-        transform: scale(1);
-        opacity: 0.65;
-    }
-    to {
-        transform: scale(1.18);
-        opacity: 1;
-        box-shadow: 0 0 25px #ff8fb3;
-    }
-}
-
-/* SURPRISE POPUP */
-.surprise-popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(60, 35, 45, 0.55);
-    backdrop-filter: blur(6px);
-    z-index: 10001;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.surprise-card {
-    background: #fff8f1;
-    border: 3px dashed #f4a6bd;
-    border-radius: 22px;
-    padding: 35px 25px;
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-    animation: surprisePop 0.5s ease;
-}
-
-@keyframes surprisePop {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.surprise-emoji {
-    font-size: 55px;
-    margin-bottom: 12px;
-}
-
-.surprise-card h2 {
-    color: #d85c87;
-    font-family: 'DM Serif Display', serif;
-    margin-bottom: 15px;
-}
-
-.surprise-card p {
-    color: #74505c;
-    line-height: 1.8;
-    white-space: pre-line;
-}
-
-.surprise-card button {
-    margin-top: 20px;
-    padding: 12px 22px;
-    background: #ed91b0;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.surprise-card button:hover {
-    background: #d85c87;
-    transform: scale(1.05);
-}
-
-.love-letter-card {
-    background: #fff0f4;
-    border: 3px solid #f2a9c0;
-}
-
-.gift {
-    font-size: 25px;
-    margin-top: 15px;
 }
