@@ -660,7 +660,7 @@ if (captureSelfieBtn) {
                 status.textContent =
                     "Your selfie has been uploaded successfully! ❤️";
 
-                console.log("Selfie uploaded:", data.path);
+                document.getElementById("loveLetter").style.display = "none";
 
             } catch (error) {
 
