@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +14,23 @@
 
     <div id="particles"></div>
 
+    <div class="ambient-glow glow-one"></div>
+    <div class="ambient-glow glow-two"></div>
+
     <!-- PAGE 1 -->
     <section class="page active" id="page1">
-        <div class="content">
+
+        <div class="content hero-content">
 
             <p class="eyebrow">a little something for you</p>
 
-            <h1>Hey, you <span>♡</span></h1>
+            <div class="hero-heart">♡</div>
+
+            <h1>Hey, <span>you</span> ♡</h1>
 
             <p class="text">
-                I made something special.
-                <br>
-                Just for you.
+                I made something small…
+                but it comes from a big place in my heart.
             </p>
 
             <button class="next-btn" onclick="nextPage()">
@@ -39,24 +43,25 @@
 
     <!-- PAGE 2 -->
     <section class="page" id="page2">
-        <div class="content">
 
-            <p class="eyebrow">today is your day</p>
+        <div class="content birthday-content">
+
+            <p class="eyebrow">today is all about you</p>
 
             <h1 class="birthday-title">
-                Happy Birthday
-                <br>
-                <span>Beautiful ♡</span>
+                Happy Birthday<br>
+                <span>Beautiful</span> 🎀
             </h1>
-
-            <p class="text">
-                Another year of you being wonderfully you.
-            </p>
 
             <div class="floating-emoji">🎀</div>
 
+            <p class="text">
+                I hope today brings you the same warmth
+                and happiness that you bring into the lives around you.
+            </p>
+
             <button class="next-btn" onclick="nextPage()">
-                Continue →
+                Continue ♡
             </button>
 
         </div>
@@ -65,9 +70,10 @@
 
     <!-- PAGE 3 -->
     <section class="page" id="page3">
-        <div class="content">
 
-            <p class="eyebrow">a few words from me</p>
+        <div class="content letter-content">
+
+            <p class="eyebrow">words from my heart</p>
 
             <div class="letter">
 
@@ -76,25 +82,31 @@
                 <h2>Dear you,</h2>
 
                 <p>
-                    I hope life gives you a thousand reasons
-                    to smile. I hope you always find happiness
-                    in little things, peace in difficult days,
-                    and people who love you just the way you are.
+                    Some people have a way of making ordinary days
+                    feel a little more special.
+                    You are one of those people.
                 </p>
 
                 <p>
-                    You deserve kindness, beautiful moments,
-                    and dreams that come true.
+                    I hope you never forget how precious your smile is,
+                    how much kindness you carry,
+                    and how deserving you are of beautiful things.
+                </p>
+
+                <p>
+                    May this new year of your life be full of little joys,
+                    unexpected magic, peaceful moments,
+                    and dreams coming true.
                 </p>
 
                 <p class="signature">
-                    With love, ♡
+                    With a little love, ♡
                 </p>
 
             </div>
 
             <button class="next-btn" onclick="nextPage()">
-                One more thing →
+                One more thing ♡
             </button>
 
         </div>
@@ -103,145 +115,159 @@
 
     <!-- PAGE 4 -->
     <section class="page" id="page4">
-        <div class="content">
+
+        <div class="content cake-content">
 
             <p class="eyebrow">make a little wish</p>
 
-            <h1>Here's your cake 🎂</h1>
+            <h1>
+                One wish, <span>just for you</span>
+            </h1>
 
-            <div class="cake" id="cake">🎂</div>
+            <div class="cake" id="cake">
+                🎂
+            </div>
 
             <p class="text" id="cakeText">
-                Make a wish and tap the cake ✨
+                Tap the cake and make a wish! ✨
             </p>
 
             <button class="next-btn" onclick="nextPage()">
-                Your memories →
+                Your memories ♡
             </button>
 
         </div>
     </section>
 
 
-    <!-- PAGE 5 -->
-    <section class="page" id="page5">
-        <div class="content">
+    <!-- PAGE 5 : MEMORIES -->
+    <section class="page memories-page" id="page5">
 
-            <p class="eyebrow">little moments, big memories</p>
+        <div class="memory-heading">
 
-            <h1>Memories <span>♡</span></h1>
+            <p class="eyebrow">
+                little moments, big memories
+            </p>
 
-            <div class="memory-box">
+            <h1>
+                Memories <span>♡</span>
+            </h1>
 
-                <div class="photo-placeholder">📷</div>
+            <p class="memory-subtitle">
+                Some moments deserve to stay forever.
+            </p>
 
-                <p>
-                    Some moments deserve to stay forever.
-                </p>
+        </div>
 
-                <p class="small">
-                    Replace this space with your favourite photo.
-                </p>
 
-            </div>
+        <!-- PHOTO AREA -->
+        <div class="memory-stage" id="memoryStage">
+
+            <!-- PHOTO 1 -->
+            <figure class="floating-photo photo-1" data-photo="1">
+                <img src="photo1.jpg" alt="Memory 1">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 2 -->
+            <figure class="floating-photo photo-2" data-photo="2">
+                <img src="photo2.jpg" alt="Memory 2">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 3 -->
+            <figure class="floating-photo photo-3" data-photo="3">
+                <img src="photo3.jpg" alt="Memory 3">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 4 -->
+            <figure class="floating-photo photo-4" data-photo="4">
+                <img src="photo4.jpg" alt="Memory 4">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 5 -->
+            <figure class="floating-photo photo-5" data-photo="5">
+                <img src="photo5.jpg" alt="Memory 5">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 6 -->
+            <figure class="floating-photo photo-6" data-photo="6">
+                <img src="photo6.jpg" alt="Memory 6">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 7 -->
+            <figure class="floating-photo photo-7" data-photo="7">
+                <img src="photo7.jpg" alt="Memory 7">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+            <!-- PHOTO 8 -->
+            <figure class="floating-photo photo-8" data-photo="8">
+                <img src="photo8.jpg" alt="Memory 8">
+                <span class="photo-heart">♡</span>
+            </figure>
+
+
+            <!-- SPARKLES -->
+            <div class="memory-sparkle sparkle-a">✦</div>
+            <div class="memory-sparkle sparkle-b">✧</div>
+            <div class="memory-sparkle sparkle-c">♡</div>
+            <div class="memory-sparkle sparkle-d">✦</div>
+
+        </div>
+
+
+        <!-- PAGE 5 FOOTER -->
+        <div class="memory-footer">
+
+            <p>Every little memory is a piece of magic ✨</p>
 
             <button class="next-btn" onclick="nextPage()">
-                Last question →
+                Continue to the last question ♡
             </button>
 
         </div>
+
     </section>
 
 
     <!-- PAGE 6 -->
     <section class="page" id="page6">
-        <div class="content">
 
-            <p class="eyebrow">be honest now 😂</p>
+        <div class="content final-content">
 
-            <h1>Do you love me? <span>♡</span></h1>
+            <p class="eyebrow">one last question</p>
+
+            <div class="final-heart">♡</div>
+
+            <h1>
+                Do you <span>love me?</span> ♡
+            </h1>
 
             <p class="text">
-                Choose wisely... 👀
+                Choose carefully… my heart is watching. 🥹
             </p>
 
             <div class="love-area">
 
-                <button id="yesBtn" class="yes-btn">
+                <button class="yes-btn" id="yesBtn">
                     Yes ❤️
                 </button>
 
-                <button id="noBtn" class="no-btn">
+                <button class="no-btn" id="noBtn">
                     No 🙈
                 </button>
 
             </div>
 
-            <p id="finalMessage"></p>
-
-
-            <!-- SURPRISE HEART -->
-            <button id="surpriseHeart" class="surprise-heart">
-                💗
-            </button>
-
-
-            <!-- SURPRISE POPUP -->
-            <div id="surprisePopup" class="surprise-popup">
-
-                <div class="surprise-card">
-
-                    <div class="surprise-emoji">🎁</div>
-
-                    <h2>Yayyyy! 💗</h2>
-
-                    <p>
-                        Now it's time for your surprise!
-                    </p>
-
-                    <button id="openSurprise">
-                        Open My Surprise ✨
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- SECRET LOVE LETTER -->
-            <div id="loveLetter" class="surprise-popup">
-
-                <div class="surprise-card love-letter-card">
-
-                    <div class="surprise-emoji">💌</div>
-
-                    <h2>A Little Message For You</h2>
-
-                    <p>
-                        You are one of the sweetest parts of my world.
-
-                        I hope your smile never fades, your dreams
-                        come true, and you always find a reason
-                        to be happy.
-
-                        Here's a virtual hug just for you! 🤗
-
-                        You deserve all the happiness in the world. ❤️
-                    </p>
-
-                    <div class="gift">
-                        🎀 🌷 💗 🌷 🎀
-                    </div>
-
-                    <button id="captureSelfie">
-                        Capture a Selfie for Me 📸
-                    </button>
-
-                </div>
-
-            </div>
+            <div id="finalMessage"></div>
 
         </div>
+
     </section>
 
 
@@ -251,7 +277,70 @@
     </div>
 
 
-    <!-- SUPABASE LIBRARY -->
+    <!-- SECRET HEART -->
+    <button class="surprise-heart" id="surpriseHeart">
+        💗
+    </button>
+
+
+    <!-- SURPRISE POPUP -->
+    <div class="surprise-popup" id="surprisePopup">
+
+        <div class="surprise-card">
+
+            <div class="surprise-emoji">💝</div>
+
+            <h2>Hehe, I knew it!</h2>
+
+            <p>
+                Here's one more tiny surprise,
+                just for you.
+                Keep this moment close to your heart. ❤️
+            </p>
+
+            <button id="openSurprise">
+                Open my little surprise ✨
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOVE LETTER POPUP -->
+    <div class="love-letter-popup" id="loveLetter">
+
+        <div class="love-letter-card">
+
+            <button class="popup-close" id="closeLoveLetter">
+                ×
+            </button>
+
+            <div class="letter-icon">💌</div>
+
+            <h2>A little memory from today</h2>
+
+            <p>
+                Some moments are too lovely to keep only in our hearts.
+                If you'd like, take a selfie to remember
+                this little birthday surprise. ♡
+            </p>
+
+            <button class="selfie-btn" id="captureSelfie">
+                Take a selfie 📸
+            </button>
+
+            <p class="small-note">
+                Your camera will open only after you allow it.
+                You can choose whether to upload your photo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPABASE -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <!-- JAVASCRIPT -->
